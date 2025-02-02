@@ -2,6 +2,10 @@ export {Game} from './Game';
 
 export type {GameProps} from './Game';
 
+export {SimpleGame} from './SimpleGame';
+
+export type {SimpleGameProps} from './SimpleGame';
+
 export {AddedByStatus} from './AddedByStatus';
 
 export type {AddedByStatusProps} from './AddedByStatus';

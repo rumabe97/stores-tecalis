@@ -1,4 +1,4 @@
-import {Game} from '../game';
+import {SimpleGame} from '../game';
 
 export interface StoreProps {
     id: number;
@@ -8,7 +8,7 @@ export interface StoreProps {
     gamesCount: number;
     imageBackground: number;
     description: string;
-    games: Game[];
+    games: SimpleGame[];
 }
 
 export class Store {
@@ -19,7 +19,7 @@ export class Store {
     gamesCount: number;
     imageBackground: number;
     description: string;
-    games: Game[];
+    games: SimpleGame[];
 
     constructor(storeProps: StoreProps) {
         this.id = storeProps.id;
