@@ -1,0 +1,32 @@
+<div class="card card-coin card-plain">
+    <div class="card-header">
+        <img
+                class="img-fluid rounded-circle"
+                src="{{store.imageBackground}}"
+                alt="Store image"/>
+
+        <h4 class="title">{{ store.name }}</h4>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table tablesorter" id="plain-table">
+                <thead class="text-danger">
+                <tr>
+                    <th class="header">
+                        <a href="https://{{store.domain}}" target="_blank" rel="noopener noreferrer"
+                           class="d-flex align-items-center text-decoration-none link" style="cursor: pointer;">
+                            <i class="fa fa-external-link-alt me-2"></i>
+                            Go to Web Site
+                        </a>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{ store.gamesCount }} games</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
