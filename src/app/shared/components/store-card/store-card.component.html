@@ -1,4 +1,4 @@
-<div class="card card-coin card-plain card-hover">
+<div class="card card-coin card-plain card-hover" (click)="goToStore()">
     <div class="card-header">
         <img
                 class="img-fluid rounded-circle"
@@ -13,7 +13,7 @@
                 <tr>
                     <th class="header">
                         <a href="https://{{store.domain}}" target="_blank" rel="noopener noreferrer"
-                           class="d-flex align-items-center text-decoration-none link" style="cursor: pointer;">
+                           class="d-flex align-items-center text-decoration-none link" style="cursor: pointer;" (click)="$event.stopPropagation()">
                             <i class="fa fa-external-link-alt me-2"></i>
                             Go to Web Site
                         </a>

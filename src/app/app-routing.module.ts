@@ -1,29 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
-
-import { IndexComponent } from './pages/index/index.component';
-import { ProfilepageComponent } from './pages/examples/profilepage/profilepage.component';
-import { RegisterpageComponent } from './pages/examples/registerpage/registerpage.component';
-import { LandingpageComponent } from './pages/examples/landingpage/landingpage.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {BrowserModule} from '@angular/platform-browser';
+import {Routes, RouterModule} from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./modules/home/home.module').then(mod => mod.HomeModule), },
-  // { path: 'profile', component: ProfilepageComponent },
-  // { path: 'register', component: RegisterpageComponent },
-  // { path: 'landing', component: LandingpageComponent }
+    {path: '', redirectTo: 'stores', pathMatch: 'full'},
+    {path: 'stores', loadChildren: () => import('./modules/home/home.module').then(mod => mod.HomeModule),}
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BrowserModule,
-    RouterModule.forRoot(routes, {
-      useHash: true
-    })
-  ],
-  exports: []
+    imports: [
+        CommonModule,
+        BrowserModule,
+        RouterModule.forRoot(routes, {
+            useHash: true
+        })
+    ],
+    exports: []
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

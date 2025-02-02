@@ -6,17 +6,17 @@ import {
 } from '@angular/router';
 import {Observable} from 'rxjs';
 import {StoreService} from '../../repositories/store';
-import {getAllStores} from '../../services/store';
+import {getStore} from '../../services/store';
 import {Store} from '../../entities/store';
 
 @Injectable({
     providedIn: 'root'
 })
-export class StoreListResolver implements Resolve<Store[]> {
+export class StoreDetailResolver implements Resolve<Store> {
     constructor(private _storeService: StoreService) {
     }
 
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Store[]> {
-        return getAllStores(this._storeService);
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Store> {
+        return getStore(route.params.id, this._storeService);
     }
 }
