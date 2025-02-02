@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.stores = this._route.snapshot.data.response;
-    console.log(this.stores)
   }
 
 }
