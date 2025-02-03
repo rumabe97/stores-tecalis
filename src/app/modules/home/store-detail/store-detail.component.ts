@@ -27,7 +27,6 @@ export class StoreDetailComponent implements OnInit {
     openModal(id: number) {
        getGame(id,this._gameService).subscribe(game => {
            this.selectedGame = game;
-           console.log(this.selectedGame)
        })
     }
 }
