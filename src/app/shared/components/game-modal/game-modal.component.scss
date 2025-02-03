@@ -1,0 +1,76 @@
+.store-description {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modal {
+  z-index: 1050;
+}
+
+.modal-backdrop {
+  z-index: 1040;
+}
+
+.modal.show .modal-dialog {
+  transform: translate(0);
+}
+
+.description-container {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  transition: max-height 0.3s ease;
+}
+
+.description-container.expanded {
+  -webkit-line-clamp: unset;
+}
+
+.modal-dialog {
+  overflow-y: auto;
+  height: 93%;
+}
+
+.modal-content {
+  background-color: #171941 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 10px;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px 24px;
+}
+
+.modal-body {
+  background-color: #171941;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-body p {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+::ng-deep .modal-content .modal-body p {
+  color: white !important;
+}
+.modal-content .modal-header .modal-title {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-close{
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.1rem;
+}

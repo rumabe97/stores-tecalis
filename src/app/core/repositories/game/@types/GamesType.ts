@@ -3,6 +3,7 @@ export interface GameDto {
     slug: string;
     name: string;
     released: string;
+    description:string;
     tba: boolean;
     background_image: string;
     rating: number;

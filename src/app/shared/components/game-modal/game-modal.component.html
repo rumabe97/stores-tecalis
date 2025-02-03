@@ -1,0 +1,27 @@
+<div class="modal fade show d-block" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">{{ game?.name }}</h3>
+                <button type="button" class="btn-close" aria-label="Close" (click)="close()">X</button>
+            </div>
+            <div class="modal-body">
+                <img src="{{game?.backgroundImage}}" class="img-fluid mb-3" alt="Game Image"/>
+                <div class="description-container" [class.expanded]="expanded">
+                    <p class="store-description" [innerHTML]="safeDescription"></p>
+                </div>
+                <button class="btn btn-link" (click)="toggleExpanded()">
+                    {{ expanded ? 'Read less' : 'Read more' }}
+                </button>
+                <p><strong>Released:</strong> {{ game?.released }}</p>
+                <div class="progress-container">
+                    <span class="progress-badge"> Rating </span>
+                    <progressbar [value]="game?.rating * 20">
+                        <span class="progress-value">{{ game?.rating * 20 | number:'1.0-0' }}%</span>
+                    </progressbar>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-backdrop fade show"></div>

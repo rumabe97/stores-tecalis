@@ -1,10 +1,6 @@
 import {AddedByStatus} from './AddedByStatus';
 import {Rating} from './Rating';
-import {GamePlatform} from './GamePlatform';
 import {ParentPlatform} from './ParentPlatform';
-import {Genre} from './Genre';
-import {GameStore} from './GameStore';
-import {Tag} from './Tag';
 import {EsrbRating} from './EsrbRating';
 import {Screenshot} from './Screenshot';
 
@@ -13,6 +9,7 @@ export interface GameProps {
     slug: string;
     name: string;
     released: string;
+    description: string
     tba: boolean;
     backgroundImage: string;
     rating: number;
@@ -30,12 +27,12 @@ export interface GameProps {
     reviewsCount: number;
     saturatedColor: string;
     dominantColor: string;
-    platforms: GamePlatform[];
+    // platforms: GamePlatform[];
     parentPlatforms: ParentPlatform[];
-    genres: Genre[];
-    stores: GameStore[];
+    // genres: Genre[];
+    // stores: GameStore[];
     clip: any;
-    tags: Tag[];
+    // tags: Tag[];
     esrbRating: EsrbRating;
     shortScreenshots: Screenshot[];
 }
@@ -45,6 +42,7 @@ export class Game {
     slug: string;
     name: string;
     released: string;
+    description: string
     tba: boolean;
     backgroundImage: string;
     rating: number;
@@ -62,12 +60,12 @@ export class Game {
     reviewsCount: number;
     saturatedColor: string;
     dominantColor: string;
-    platforms: GamePlatform[];
+    // platforms: GamePlatform[];
     parentPlatforms: ParentPlatform[];
-    genres: Genre[];
-    stores: GameStore[];
+    // genres: Genre[];
+    // stores: GameStore[];
     clip: any;
-    tags: Tag[];
+    // tags: Tag[];
     esrbRating: EsrbRating;
     shortScreenshots: Screenshot[];
 
@@ -76,6 +74,7 @@ export class Game {
         this.slug = gameProps.slug;
         this.name = gameProps.name;
         this.released = gameProps.released;
+        this.description = gameProps.description;
         this.tba = gameProps.tba;
         this.backgroundImage = gameProps.backgroundImage;
         this.rating = gameProps.rating;
@@ -93,12 +92,12 @@ export class Game {
         this.reviewsCount = gameProps.reviewsCount;
         this.saturatedColor = gameProps.saturatedColor;
         this.dominantColor = gameProps.dominantColor;
-        this.platforms = gameProps.platforms;
+        // this.platforms = gameProps.platforms;
         this.parentPlatforms = gameProps.parentPlatforms;
-        this.genres = gameProps.genres;
-        this.stores = gameProps.stores;
+        // this.genres = gameProps.genres;
+        // this.stores = gameProps.stores;
         this.clip = gameProps.clip;
-        this.tags = gameProps.tags;
+        // this.tags = gameProps.tags;
         this.esrbRating = gameProps.esrbRating;
         this.shortScreenshots = gameProps.shortScreenshots;
     }

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {SimpleGame} from '../../../core/entities/game';
 
 @Component({
@@ -8,6 +8,7 @@ import {SimpleGame} from '../../../core/entities/game';
 })
 export class GameCardComponent implements OnInit {
     @Input() game: SimpleGame;
+    @Output() openModal = new EventEmitter<number>();
 
     constructor() {
     }
@@ -15,4 +16,7 @@ export class GameCardComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    openGameModal() {
+        this.openModal.emit(this.game.id);
+    }
 }

@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
 import {GameDto} from './@types/GamesType';
 
 @Injectable({
@@ -15,8 +14,7 @@ export class GameService {
     constructor(private _http: HttpClient) {
     }
 
-    getGamesOfStore(): Observable<GameDto[]> {
-        return this._http.get<any>(`${this.url}games`)
-            .pipe(map(value => value.results))
+    getGameDetail(id: number): Observable<GameDto> {
+        return this._http.get<any>(`${this.url}games/${id}`);
     }
 }
