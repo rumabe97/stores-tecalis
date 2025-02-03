@@ -1,17 +1,20 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {LoaderComponent} from './components/loader/loader.component';
-import { StoreCardComponent } from './components/store-card/store-card.component';
+import {StoreCardComponent} from './components/store-card/store-card.component';
+import {GameCardComponent} from './components/game-card/game-card.component';
 
 
 @NgModule({
     declarations: [
         LoaderComponent,
-        StoreCardComponent
+        StoreCardComponent,
+        GameCardComponent
     ],
     exports: [
         LoaderComponent,
-        StoreCardComponent
+        StoreCardComponent,
+        GameCardComponent
     ],
     imports: [
         CommonModule

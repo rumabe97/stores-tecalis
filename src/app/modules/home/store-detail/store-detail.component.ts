@@ -18,6 +18,7 @@ export class StoreDetailComponent implements OnInit {
     ngOnInit(): void {
         this.store = this._route.snapshot.data.response;
         this.safeDescription = this.sanitizer.bypassSecurityTrustHtml(this.store.description);
+        console.log(this.store);
     }
 
 }
