@@ -5,6 +5,11 @@ import {StoreCardComponent} from './components/store-card/store-card.component';
 import {GameCardComponent} from './components/game-card/game-card.component';
 import { GameModalComponent } from './components/game-modal/game-modal.component';
 import {ProgressbarModule} from 'ngx-bootstrap/progressbar';
+import { HeaderComponent } from './components/header/header.component';
+import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+import {RouterModule} from '@angular/router';
+import {TooltipModule} from 'ngx-bootstrap/tooltip';
+import {CollapseModule} from 'ngx-bootstrap/collapse';
 
 
 @NgModule({
@@ -12,17 +17,23 @@ import {ProgressbarModule} from 'ngx-bootstrap/progressbar';
         LoaderComponent,
         StoreCardComponent,
         GameCardComponent,
-        GameModalComponent
+        GameModalComponent,
+        HeaderComponent
     ],
     exports: [
         LoaderComponent,
         StoreCardComponent,
         GameCardComponent,
-        GameModalComponent
+        GameModalComponent,
+        HeaderComponent
     ],
     imports: [
         CommonModule,
-        ProgressbarModule
+        ProgressbarModule,
+        BsDropdownModule,
+        RouterModule,
+        TooltipModule,
+        CollapseModule
     ]
 })
 export class SharedModule {
