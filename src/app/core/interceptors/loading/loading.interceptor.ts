@@ -23,7 +23,7 @@ export class LoadingInterceptor implements HttpInterceptor {
             .pipe(catchError((err) => {
                 this._loadingService.setLoading(false, request.url);
                 const message = err.error?.error || 'An unexpected error occurred.';
-                this.toastService.show(message);
+                // this.toastService.show(message);
                 return err;
             }))
             .pipe(map<HttpEvent<any>, any>((evt: HttpEvent<any>) => {
