@@ -6,10 +6,11 @@ import {GameCardComponent} from './components/game-card/game-card.component';
 import { GameModalComponent } from './components/game-modal/game-modal.component';
 import {ProgressbarModule} from 'ngx-bootstrap/progressbar';
 import { HeaderComponent } from './components/header/header.component';
-import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {RouterModule} from '@angular/router';
 import {TooltipModule} from 'ngx-bootstrap/tooltip';
 import {CollapseModule} from 'ngx-bootstrap/collapse';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -18,14 +19,16 @@ import {CollapseModule} from 'ngx-bootstrap/collapse';
         StoreCardComponent,
         GameCardComponent,
         GameModalComponent,
-        HeaderComponent
+        HeaderComponent,
+        FooterComponent
     ],
     exports: [
         LoaderComponent,
         StoreCardComponent,
         GameCardComponent,
         GameModalComponent,
-        HeaderComponent
+        HeaderComponent,
+        FooterComponent
     ],
     imports: [
         CommonModule,
